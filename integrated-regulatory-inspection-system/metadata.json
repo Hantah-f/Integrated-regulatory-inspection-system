@@ -1,0 +1,6 @@
+{
+  "name": "Integrated Regulatory Inspection System",
+  "description": "An advanced, multi-layered regulatory oversight and field inspection management system for the Communications Authority of Kenya (CA), tracking Telecommunications, Broadcasting, Postal, and Cybersecurity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

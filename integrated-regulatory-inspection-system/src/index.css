@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800&family=JetBrains+Mono:wght=400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Redefine slate colors using CSS variables for high-flexibility themes */
+  --color-slate-50: var(--bg-50);
+  --color-slate-100: var(--bg-100);
+  --color-slate-200: var(--bg-200);
+  --color-slate-300: var(--bg-300);
+  --color-slate-400: var(--bg-400);
+  --color-slate-500: var(--bg-500);
+  --color-slate-600: var(--bg-600);
+  --color-slate-700: var(--bg-700);
+  --color-slate-800: var(--bg-800);
+  --color-slate-900: var(--bg-900);
+  --color-slate-950: var(--bg-950);
+
+  /* Redefine white */
+  --color-white: var(--bg-white);
+
+  /* Redefine indigo (accent) colors */
+  --color-indigo-50: var(--accent-50);
+  --color-indigo-100: var(--accent-100);
+  --color-indigo-200: var(--accent-200);
+  --color-indigo-500: var(--accent-500);
+  --color-indigo-600: var(--accent-600);
+  --color-indigo-700: var(--accent-700);
+  --color-indigo-800: var(--accent-800);
+  --color-indigo-900: var(--accent-900);
+  --color-indigo-950: var(--accent-950);
+}
+
+:root {
+  /* Default: Light Theme (Slate) */
+  --bg-50: #f8fafc;
+  --bg-100: #f1f5f9;
+  --bg-200: #e2e8f0;
+  --bg-300: #cbd5e1;
+  --bg-400: #94a3b8;
+  --bg-500: #64748b;
+  --bg-600: #475569;
+  --bg-700: #334155;
+  --bg-800: #1e293b;
+  --bg-900: #0f172a;
+  --bg-950: #020617;
+  --bg-white: #ffffff;
+
+  /* Default Accent: Indigo */
+  --accent-50: #e0e7ff;
+  --accent-100: #c7d2fe;
+  --accent-200: #a5b4fc;
+  --accent-500: #6366f1;
+  --accent-600: #4f46e5;
+  --accent-700: #4338ca;
+  --accent-800: #3730a3;
+  --accent-900: #312e81;
+  --accent-950: #1e1b4b;
+}
+
+/* Theme Classes */
+.theme-dark {
+  /* Dark Theme Variable Overrides */
+  --bg-50: #090d16;   /* bg-slate-50 -> dark deep blue-gray background */
+  --bg-100: #121824;  /* bg-slate-100 -> dark border / subtle line */
+  --bg-200: #1e293b;  /* bg-slate-200 -> dark border / solid line */
+  --bg-300: #334155;  /* bg-slate-300 */
+  --bg-400: #475569;  /* bg-slate-400 */
+  --bg-500: #94a3b8;  /* bg-slate-500 -> light-gray text / secondary info */
+  --bg-600: #cbd5e1;  /* bg-slate-600 */
+  --bg-700: #e2e8f0;  /* bg-slate-700 */
+  --bg-800: #f1f5f9;  /* bg-slate-800 */
+  --bg-900: #f8fafc;  /* bg-slate-900 -> primary text (off-white) */
+  --bg-950: #ffffff;  /* bg-slate-950 */
+  --bg-white: #111827; /* bg-white -> card background (very dark gray) */
+}
+
+.theme-high-contrast-light {
+  /* High Contrast Light (For maximum visibility - Pure White + Solid Black Borders) */
+  --bg-50: #ffffff;
+  --bg-100: #000000;  /* Strongest borders */
+  --bg-200: #000000;
+  --bg-300: #000000;
+  --bg-400: #000000;
+  --bg-500: #000000;
+  --bg-600: #000000;
+  --bg-700: #000000;
+  --bg-800: #000000;
+  --bg-900: #000000;  /* Pure black text */
+  --bg-950: #000000;
+  --bg-white: #ffffff; /* Pure white card background */
+
+  /* High Visibility Deep Blue Accents */
+  --accent-50: #eff6ff;
+  --accent-100: #dbeafe;
+  --accent-200: #bfdbfe;
+  --accent-500: #1d4ed8;
+  --accent-600: #1e40af;
+  --accent-700: #1e3a8a;
+  --accent-800: #172554;
+  --accent-900: #030712;
+  --accent-950: #030712;
+}
+
+.theme-high-contrast-dark {
+  /* High Contrast Dark (For maximum visibility - Pure Black + Solid White / Neon Borders) */
+  --bg-50: #000000;   /* Pure black outer bg */
+  --bg-100: #ffffff;  /* Solid white borders */
+  --bg-200: #ffffff;
+  --bg-300: #ffffff;
+  --bg-400: #ffffff;
+  --bg-500: #ffffff;  /* White secondary text */
+  --bg-600: #ffffff;
+  --bg-700: #ffffff;
+  --bg-800: #ffffff;
+  --bg-900: #ffffff;  /* Pure white primary text */
+  --bg-950: #ffffff;
+  --bg-white: #000000; /* Pure black cards */
+
+  /* Neon Yellow accents for incredible visibility in dark environments */
+  --accent-50: #1a1a00;
+  --accent-100: #1a1a00;
+  --accent-200: #ffff00;
+  --accent-500: #eab308;
+  --accent-600: #ffff00;
+  --accent-700: #ffff00;
+  --accent-800: #ffffff;
+  --accent-900: #ffffff;
+  --accent-950: #ffffff;
+}
+
+/* Accent Palettes */
+.accent-indigo {
+  --accent-50: #e0e7ff;
+  --accent-100: #c7d2fe;
+  --accent-200: #a5b4fc;
+  --accent-500: #6366f1;
+  --accent-600: #4f46e5;
+  --accent-700: #4338ca;
+  --accent-800: #3730a3;
+  --accent-900: #312e81;
+  --accent-950: #1e1b4b;
+}
+
+.accent-emerald {
+  --accent-50: #f0fdf4;
+  --accent-100: #dcfce7;
+  --accent-200: #bbf7d0;
+  --accent-500: #22c55e;
+  --accent-600: #16a34a;
+  --accent-700: #15803d;
+  --accent-800: #166534;
+  --accent-900: #14532d;
+  --accent-950: #052e16;
+}
+
+.accent-rose {
+  --accent-50: #fff1f2;
+  --accent-100: #ffe4e6;
+  --accent-200: #fecdd3;
+  --accent-500: #f43f5e;
+  --accent-600: #e11d48;
+  --accent-700: #be123c;
+  --accent-800: #9f1239;
+  --accent-900: #881337;
+  --accent-950: #4c0519;
+}
+
+.accent-amber {
+  --accent-50: #fffbeb;
+  --accent-100: #fef3c7;
+  --accent-200: #fde68a;
+  --accent-500: #f59e0b;
+  --accent-600: #d97706;
+  --accent-700: #b45309;
+  --accent-800: #92400e;
+  --accent-900: #78350f;
+  --accent-950: #451a03;
+}
+
+.accent-slate {
+  --accent-50: #f8fafc;
+  --accent-100: #f1f5f9;
+  --accent-200: #e2e8f0;
+  --accent-500: #64748b;
+  --accent-600: #475569;
+  --accent-700: #334155;
+  --accent-800: #1e293b;
+  --accent-900: #0f172a;
+  --accent-950: #020617;
+}
+
+/* Accessibility Scaling Rem Roots */
+html.font-size-standard {
+  font-size: 16px;
+}
+html.font-size-large {
+  font-size: 18px;
+}
+html.font-size-xlarge {
+  font-size: 20px;
+}
